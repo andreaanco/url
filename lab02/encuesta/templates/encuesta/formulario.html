@@ -1,0 +1,29 @@
+<h2>{{ titulo }}</h2>
+<form action="enviar" method="post">
+    {% csrf_token %}
+    Nombre:
+    <input type="text" name="nombre" maxlength="50"><br><br>
+    Contraseña:
+    <input type="password" name="password"><br><br>
+    Educacion:
+    <select name="educacion">
+        <option value="sin-estudios">Sin estudios</option>
+        <option value="eduacacion-obligatoria" selected="selected">Educacion Obligatoria</option>
+        <option value="formacion-profesional">Formacion Profesional</option>
+        <option value="universidad">Universidad</option>
+    </select><br><br>
+    Nacionalidad:<br>
+    <input type="radio" name="nacionalidad" value="hispana">Hispana</input><br>
+    <input type="radio" name="nacionalidad" value="otra">Otra</input><br><br>
+    Idiomas:<br>
+    <input type="checkbox" name="idiomas" value="español" checked="checked">Español</input><br>
+    <input type="checkbox" name="idiomas" value="ingles">Ingles</input><br>
+    <input type="checkbox" name="idiomas" value="frances">Frances</input><br>
+    <input type="checkbox" name="idiomas" value="aleman">Aleman</input><br><br>
+    Email:
+    <input type="text" name="email"><br><br>
+    Sitio Web:
+    <input type="text" name="sitioweb"><br><br>
+    Boton de enviar
+    <input type="submit" name="submit" value="Enviar">
+</form>
